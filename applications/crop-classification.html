@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+	<!--[if lt IE 10]> <html class="lt-ie10 no-js"  lang=""> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="Exploratory, and collaboratory, review of current and upcoming satellite tools for development, from capture, distribution, analysis and applications.">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>State of Satellite Imagery</title>
+	<link rel="canonical" href="/applications/crop-classification.html">
+	<link rel="alternate" type="application/rss+xml" title="Jekyll Seed" href="/feed.xml">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,500,300,300italic' rel='stylesheet' type='text/css'>
+
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+	<link rel="stylesheet" href="/assets/styles/main-d1db091a87.css">
+</head>
+
+
+	<body>
+
+		<header id="header" class="hero">
+	<div class="hero-block">
+	  <h1 class="hero-block__title"><a href="/" class="icon-centerer"><i class="collecticon collecticon-satsummit-logo-symbol-pos"></i> Satellites in Global Development</a></h1>
+		<!-- Mobile Nav -->
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn">&times;</a>
+			<ul class="secondnav">
+			  <li class="sidebar--title sidebar--title__first "><a href="/">Introduction</a></li>
+			  
+			    
+			      <li class="sidebar--title "><a href="/capture/">Capture</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/spatial-and-temporal-resolution.html"><i class="collecticon collecticon-circle-empty"></i><span>Spatial and Temporal Resolution</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/analysis/">Analysis</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/analysis/spectral-bands.html"><i class="collecticon collecticon-circle-empty"></i><span>Spectral Bands</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/analysis/advanced-analysis.html"><i class="collecticon collecticon-circle-empty"></i><span>Advanced Analysis</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/distribution/">Distribution</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/distribution/key-concepts.html"><i class="collecticon collecticon-circle-empty"></i><span>Key Concepts</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/distribution/commercial-analysis-platforms.html"><i class="collecticon collecticon-circle-empty"></i><span>Commercial Analysis Platforms</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/applications/">Applications</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/accounting-of-transportation-networks.html"><i class="collecticon collecticon-circle-empty"></i><span>Accounting of Transportation Networks</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/forest-and-agriculture.html"><i class="collecticon collecticon-circle-empty"></i><span>Forest and Agriculture</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/disaster-reduction-and-response.html"><i class="collecticon collecticon-circle-empty"></i><span>Disaster Reduction and Response</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection siderbar--item__active"><a href="/applications/crop-classification.html"><i class="collecticon collecticon-circle-full"></i><span>Crop Classification in Challenging Geographies</span></a></li>
+			    
+			  
+			</ul>
+		</div>
+
+	  <!-- Mobile Nav Opener -->
+		<nav class="nav--trigger"><i class="collecticon collecticon-hamburger-menu"></i></nav>
+
+	  <!-- Contribute Block -->
+	  <a href="https://github.com/satsummit/landscape" target="_blank">
+	    <div class="contribute-block">
+	    	<i class="collecticon collecticon-github"></i>CONTRIBUTE
+	    </div>
+	  </a>
+	</div>
+</header>
+
+
+		<div class="container">
+		  <div class="container-sidenav">
+				<ul class="sidebar">
+  <li class="sidebar--title sidebar--title__first "><a href="/">Introduction</a></li>
+  
+    
+      <li class="sidebar--title "><a href="/capture/">Capture</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/spatial-and-temporal-resolution.html"><i class="collecticon collecticon-circle-empty"></i><span>Spatial and Temporal Resolution</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/analysis/">Analysis</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/analysis/spectral-bands.html"><i class="collecticon collecticon-circle-empty"></i><span>Spectral Bands</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/analysis/advanced-analysis.html"><i class="collecticon collecticon-circle-empty"></i><span>Advanced Analysis</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/distribution/">Distribution</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/distribution/key-concepts.html"><i class="collecticon collecticon-circle-empty"></i><span>Key Concepts</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/distribution/commercial-analysis-platforms.html"><i class="collecticon collecticon-circle-empty"></i><span>Commercial Analysis Platforms</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/applications/">Applications</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/accounting-of-transportation-networks.html"><i class="collecticon collecticon-circle-empty"></i><span>Accounting of Transportation Networks</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/forest-and-agriculture.html"><i class="collecticon collecticon-circle-empty"></i><span>Forest and Agriculture</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/disaster-reduction-and-response.html"><i class="collecticon collecticon-circle-empty"></i><span>Disaster Reduction and Response</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection siderbar--item__active"><a href="/applications/crop-classification.html"><i class="collecticon collecticon-circle-full"></i><span>Crop Classification in Challenging Geographies</span></a></li>
+    
+  
+ </ul>
+
+
+		    <div class="container-article">
+		      <article class="article-padding">
+
+						<!-- Generate Navigation Links-->
+						
+							
+							
+						
+							
+							
+						
+							
+							
+						
+							
+							
+						
+							
+							
+						
+							
+							
+						
+							
+							
+						
+							
+							
+						
+							
+							
+						
+							
+							
+						
+							
+							
+						
+							
+								
+							
+							
+						
+							
+							
+						
+
+						<div class="mobile--breadcrumbs">
+	
+		<a href="/applications">Applications</a> / <a href="/applications/crop-classification.html">Crop Classification in Challenging Geographies</a>
+	
+</div>
+
+
+		      	<h1 id="interpreting-agricultural-landscapes">Interpreting agricultural landscapes</h1>
+
+<hr />
+
+<p>Accurate, in-season estimates of crop extent and yield would be useful to a variety of audiences including governments, development agencies, and various organizations along agricultural value chains. Ultimately, knowing where crops are and how well they are performing will be critical in the development of insurance and financial services products for small-scale agriculturalists in developing countries. Predicting where specific crops are being grown in a current growing season using satellite imagery presents many unique challenges. Unlike roads and buildings, a crop’s appearance changes throughout the year. Even with very high-resolution satellite imagery, it can be difficult to identify specific crop types by eye. The challenge is even greater in developing countries in which field sizes are generally small; even moderate-resolution satellites like Sentinel-2 (below) may not be able to distinguish individual field boundaries in certain regions.</p>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/sent2-rukwa.png" />
+  <figcaption>Sentinel 2 image from Feb. 14th, 2017 showing urban and agricultural areas in the Rukwa Region, Tanzania.</figcaption>
+</figure>
+
+<p>Using multi-spectral and mutlti-temporal information from satellite images makes it possible to distinguish individual crop types that may be difficult or impossible to identify by eye. As a concrete example, we can use information from the red and NIR bands of a Sentinel-2 tile to generate a new band for the Normalized Difference Vegetation Index (NDVI), a useful value for distinguishing vegetation from other land cover classes. As can be seen below, NDVI values for vegetated pixels (including cropped area) change over time, exhibiting distinct patterns based on the physiology of the plant(s) occupying a given pixel.</p>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/ndviscense.png" />
+  <figcaption>NDVI in Rukwa Region, Tanzania (near Sumbawanga) derived from Sentinel-2 tiles.</figcaption>
+</figure>
+
+<p>The general lack of ground-truth training data has also constrained the development of successful models for crop type classification in developing countries. By utilizing a time-series of images, it may be possible to generate a semi-synthetic training dataset by taking advantage of the unique spectral signature through time exhibited by different crops, as described above. The image below shows NDVI time-series values (interpolated to a 5-day interval) from 5 random pixels designated as “cropped area” within the same Sentinel-2 scene shown above.</p>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/ndvi_ts.png" />
+  <figcaption>Raw (left) and smoothed (right) 5-day NDVI time-series extracted from 5 random pixels in cropped area of Rukwa Region, Tanzania. 5-day time-series for 2017 were generated by performing linear interpolation on values extracted from 28 low-cloud (&lt;15%) Sentinel-2 tiles.</figcaption>
+</figure>
+
+<p>Using a clustering algorithm that takes the time-series of the input data into account when building a distance matrix (e.g. dynamic time warping), the pixels from the scene can be grouped together based on the shape of their NDVI curves for a growing season. The plot below shows the output of clustering 10,000 pixels designated as “cropped” area from the Sentinel-2 scene above, using K-means clustering (4 clusters) and dynamic type warping to generate a distance measurement between NDVI curves.</p>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/4_clusters_fill.png" />
+  <figcaption>Mean NDVI of each cluster for all dates in the time-series. Shaded areas show the 10th and 90th percentile NDVI values from each cluster for all dates in the time-series.</figcaption>
+</figure>
+
+<p>If, for example, we decide that pixels in clusters 0 and 2 most likely represent maize, based on their apparent planting and harvesting dates, and peak NDVI values, we can label them as such and generate thousands of semi-synthetic training data samples for use in supervised classification models, including models such as recurrent neural networks that explicitly leverage information captured in time-series’.</p>
+
+		      </article>
+
+				<!-- Footer Content-->
+<footer class="article-footer ">
+
+	<!-- Determine if we need two nav blocks or one -->
+	<a href="/applications/disaster-reduction-and-response.html" class="article-footer__flex">
+		<!-- Create first footer block -->
+		<article class="article-footer__left">
+			<!-- Determine which chevron to use.. -->
+			
+				<i class="collecticon collecticon-chevron-left"></i>
+			
+
+			<!-- If we're on the first page, just use the title for the next page -->
+			<h2>
+				
+					Disaster Reduction and Response
+				
+			</h2>
+		</article>
+	 </a>
+	 <!-- If we're doing two pages, make the second block -->
+	 
+	 	<a href="/" class="article-footer__flex">
+	 		<article class="article-footer__right">
+	 			<i class="collecticon collecticon-chevron-right"></i>
+
+	 			<!-- title -->
+	 			<h2>Tools</h2>
+
+				<!-- preview -->
+	 			<p></p>
+
+	 		</article>
+	 	</a>
+	 
+</footer>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+
+		    </div>
+		  </div>
+		</div>
+
+	</body>
+
+<script src="/assets/scripts/vendor-7811046a27.js"></script>
+<script src="/assets/scripts/bundle-6669a4b0d4.js"></script>
+
+</html>
